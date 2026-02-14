@@ -8,7 +8,7 @@ from io import BytesIO
 
 # --- 1. الإعدادات ---
 TOKEN = '8288599325:AAHXJTLuQA7kUBQATwiURGbOygsH6Ij1szc'
-MY_CHAT_ID = '721121366' 
+MY_CHAT_ID = 721121366 
 
 # التركيز على البيتكوين مع العملات القيادية والأسهم النشطة
 SYMBOLS = ['BTC-USD', 'ETH-USD', 'NVDA', 'TSLA', 'AAPL']
@@ -102,4 +102,5 @@ def scanner_loop():
         time.sleep(60) # الفحص كل دقيقة
 
 threading.Thread(target=scanner_loop, daemon=True).start()
+bot.send_message(MY_CHAT_ID, "🚀 تم تشغيل البوت بنجاح من السيرفر، جاري مراقبة السوق...")
 bot.polling(none_stop=True)
